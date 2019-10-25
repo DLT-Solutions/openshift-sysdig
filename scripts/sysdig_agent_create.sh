@@ -1,3 +1,7 @@
+###########################################################################################
+##  Script to deploy sysdig agents to all cluster nodes (masters/infra/worker/support/etc)
+##  NOTE: To be run on OCP Master
+###########################################################################################
 
 oc adm new-project sysdig-agent --node-selector='app=sysdig-agent'
 oc label node --all "app=sysdig-agent"
